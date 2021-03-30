@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "e033ce74-d1da-47c1-9b7d-1ec577721499",
+		"name": "QueryExample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variables\": [\r\n        {\r\n            \"name\": \"status\",\r\n            \"operator\": \"eq\",\r\n            \"value\": \"New\"\r\n        }\r\n    ],\r\n     \"orQueries\":\r\n     [\r\n       {\r\n          \"variables\": [\r\n            {\r\n                \"name\": \"company\",\r\n                \"operator\": \"eq\",\r\n                \"value\": \"C1\"\r\n            },\r\n            {\r\n                \"name\": \"company\",\r\n                \"operator\": \"eq\",\r\n                \"value\": \"C2\"\r\n            }\r\n          ]\r\n        }\r\n    ],\r\n    \"processDefinitionKey\": \"QueryTestProcess\",\r\n    \"sorting\": [\r\n        {\r\n            \"sortBy\": \"instanceId\",\r\n            \"sortOrder\": \"desc\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/engine-rest/process-instance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"process-instance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
